@@ -1,0 +1,165 @@
+Steps to setup angular project---
+git repo:  https://dev.azure.com/Publicis-Resources-EAS/FlexiDesk/_git/FlexiDeskUI
+
+
+
+>download git bash
+>Go to folder
+open git bash here
+>git clone url   +enter
+
+install node v-14.16.0
+install angular v-9
+https://nodejs.org/ja/blog/release/v14.16.0/
+or
+npm install -g node@14.16.0
+ng install -g @angular/cli@9
+
+
+npm install --save-dev @angular-devkit/build-angular
+cd prjectname
+npm install --save
+or
+npm install --force
+
+ng serve
+npm audit
+npm audit fix
+
+
+Install : npm i @marcel/styleguide --save --registry=https://npmregistry.marcel.ai
+Install :   npm install --save @fullcalendar/core
+install :  npm install  --save @zxing/library
+install : npm install --save @zxing/browser
+
+----run if error---
+
+      @angular/cdk                       9.2.4 -> 10.2.7          ng update @angular/cdk@10
+      @angular/cli                       9.1.15 -> 10.2.4         ng update @angular/cli@10
+      @angular/core                      9.1.13 -> 10.2.5         ng update @angular/core@10
+
+-------------------
+workSpace DEV  DB
+INGGNEAVGPM1.sapient.com,1620
+
+Database Name: FlexiDeskData
+
+User: itapp_FlexiDeskUser
+-----------------------
+
+
+SSO Login: 
+https://inggneavrmt1/FlexiDesk/
+
+
+
+
+add below error
+    // eslint-disable-line no-use-before-define
+
+
+---------Webapi project setup-----
+repo devops: https://dev.azure.com/Publicis-Resources-EAS/FlexiDesk/_git/FlexiDeskAPI?_a=history
+open in broweser
+clone using visual studio
+select path 
+
+=============================
+
+---cross domain---
+https://avinashsdalvi.medium.com/cross-domain-sharing-resources-like-login-cookies-f12ca54eae44
+
+
+----testing ----
+
+
+------------Internal flexi up repo------
+https://dev.azure.com/Publicis-Resources-EAS/FlexiDesk/_git/FlexiDeskUI_Internal
+--------------
+https://testworkspace.marcel.ai/
+
+
+---------library poject---
+https://www.youtube.com/watch?v=eZDx2G0E-dQ
+
+create project
+ng new demoapplication
+
+within project create library poject
+ ng generate library demo-lib
+
+build from application to demo-lib
+ng build demo-lib
+
+import demolib module in our project app module
+then use selector on appcomponent html
+ng serve
+
+>create component
+ng g c counter --project demo-lib
+export in demo-lib.moudule.ts
+export from public-api.ts
+
+
+
+---now for npm 
+go to cd dist/demo-lib
+npm pack
+
+
+-----create new project where we are to use component of library--
+npm i C:/Hari/demo-lib/demo-lib-0.0.1.tgz
+
+
+---upload on npm---
+create account on npm
+username : hari.maurya
+email: hsmaurya.net@gmail.com
+pwd: Hsmhsm@123
+
+
+set demo-lib package.json
+  "name": "@hari.maurya/demo-lib",
+
+
+>ng build demo-lib   (ng build yourLibraryName --prod)
+>cd dist/demo-lib
+npm pack
+npm adduser
+
+npm publish --access public
+
+
+
+
+
+
+
+-------------------steps to check in code on new branch----
+>git checkout -b <branchname>       ----------for creating new branch
+>git status                      -----------for checking status
+(double click on the file)       ----------- for copy the file for commit
+>git add filename(right click and past) -----add file on staging on local
+>git commit -m "this is first changes"  -----add changes on local repo
+>git push origin branchname             --add changes on remot repo
+
+
+
+
+
+
+
+-------how to update from master ---
+git checkout master
+git stash    ----keep all changes on local temp files for futuer use
+git checkout master --- for master branch
+git pull   --get lastest code from master branch
+
+git checkout -b harmaury1_iframe1
+git status
+git add <filename>     or git add . ---for all fill adding
+git commit -m "hello"
+git push
+----------------------------------
+
+git reset --for rollback from git add
